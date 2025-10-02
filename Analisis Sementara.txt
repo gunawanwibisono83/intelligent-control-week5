@@ -1,0 +1,23 @@
+Nama : Gunawan Wibisono
+NPM  : 224308083
+Kelas: TKA-7D
+
+Analisis Sementara
+
+Analisis :
+Dalam percobaan ini praktika mengimplementasikan Deep Q-Network (DQN) yang dilatih untuk mengontrol robot CartPole di OpenAI Gym. Dengan melakukan proses training sebanyak 1000 episode, hasilnya agen mampu menjaga keseimbangan tiang dengan nilai maksimal secara bertahap. Berdasarkan hasil praktikum, terlihat bahwa pada tahap awal skor yang diperoleh masih rendah karena agen lebih banyak melakukan eksplorasi acak akibat nilai epsilon yang tinggi. Seiring bertambahnya episode, epsilon perlahan menurun sehingga agen mulai lebih banyak melakukan eksploitasi terhadap pengalaman yang sudah dipelajari. Hal ini menunjukkan bahwa dalam proses pembelajaran agen membutuhkan lebih banyak episode agar dapat mencapai performa optimal.
+
+Diskusi:
+1. Apa kelebihan dan kelemahan DQN dibandingkan metode Q-Learning klasik?
+   Walaupun praktika belum melakukan percobaan menggunakan Q-Learning klasik, namun berdasarkan beberapa literasi menunjukan bahwa Deep Q-Network (DQN) memiliki beberapa kelebihan dibandingkan Q-Learning klasik. DQN mampu menangani masalah dengan jumlah state yang sangat besar atau bahkan continue, karena menggunakan jaringan saraf untuk memperkirakan nilai Q, sedangkan Q-Learning klasik hanya mengandalkan tabel Q-Value yang tidak efisien jika state terlalu banyak. Selain itu, DQN juga bisa melakukan generalisasi sehingga pengalaman pada kondisi tertentu dapat dipakai untuk kondisi lain yang mirip. Namun DQN juga punya kelemahan yaitu membutuhkan komputasi yang jauh lebih berat, proses latihannya lebih lama, dan sering kali kurang stabil jika parameter tidak diatur dengan baik.
+
+2. Bagaimana cara mengadaptasi DQN untuk kontrol sistem dinamis seperti drone atau robot industri?
+   Untuk mengadaptasi DQN pada kontrol sistem dinamis seperti drone atau robot industri, beberapa hal yang perlu diperhatikan yaitu pertama state harus lebih kompleks karena melibatkan banyak sensor seperti posisi, orientasi, kecepatan, hingga data kamera. Kedua karena aksi pada sistem nyata sering kali bersifat continue (misalnya kecepatan motor), maka DQN perlu dikembangkan dengan algoritma turunan. Selain itu, fungsi reward harus dirancang secara hati-hati agar sesuai dengan tujuan, misalnya menjaga drone tetap stabil. 
+
+
+
+
+
+
+
+
